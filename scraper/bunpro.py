@@ -6,7 +6,7 @@ import datetime as dt
 import logging
 import os
 from collections import namedtuple
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 import requests
 from bs4 import BeautifulSoup
 import tqdm
@@ -111,7 +111,8 @@ def calc_duration(start=None, end=None):
 # save source code to a file
 def save_source_code(soup, site):
     """Save the source code of a webpage to a file."""
-    filename = site.split("/")[-1] + ".html"
+    # Unquote to get readable Japanese filenames instead of mojibake
+    filename = unquote(site.split("/")[-1]) + ".html"
     dir = os.path.dirname(
         os.path.abspath(__file__)
     )  # Get the directory of the current file
@@ -174,8 +175,9 @@ def scrape_sites(sites, times, min_session_interval):
             bar_format="{l_bar}{bar} | {n_fmt}/{total_fmt} sites",
             leave=True,
         ):
-
-            if site.split("/")[-1] in skip_sites:
+            # Use unquoted name for skipping check as well
+            unquoted_name = unquote(site.split("/")[-1])
+            if unquoted_name in skip_sites:
                 logging.info(f"Skipping {site} as it has already been scraped.")
                 continue
 
@@ -227,21 +229,33 @@ def scrape_sites(sites, times, min_session_interval):
 
 if __name__ == "__main__":
     JSON_PATH = "grammar_points.json"
-    N_LEVEL = "N1"
-    sites_to_scrape_list = get_scrape_urls(JSON_PATH, N_LEVEL)
+    LEVELS = ["Non-JLPT", "N5", "N4", "N3", "N2", "N1"]
     MIN_SLEEP = 2  # seconds
-    duration = calc_duration()
-    n_requests = len(sites_to_scrape_list)
-    sleep_times = [random.randint(MIN_SLEEP, 10) for _ in range(n_requests)]
+    MAX_SLEEP = 8  # seconds
     MIN_SESSION_INTERVAL = 30  # seconds
-
-    # Collect results from the generator
-    results = list(
-        scrape_sites(sites_to_scrape_list, sleep_times, MIN_SESSION_INTERVAL)
-    )
+    
+    all_results = []
+    
+    for level in LEVELS:
+        logging.info(f"Starting scraping for level: {level}")
+        sites_to_scrape_list = get_scrape_urls(JSON_PATH, level)
+        if not sites_to_scrape_list:
+            logging.warning(f"No URLs found for level {level}. Skipping.")
+            continue
+            
+        n_requests = len(sites_to_scrape_list)
+        # Use random sleep times to be polite
+        sleep_times = [random.randint(MIN_SLEEP, MAX_SLEEP) for _ in range(n_requests)]
+        
+        results = list(
+            scrape_sites(sites_to_scrape_list, sleep_times, MIN_SESSION_INTERVAL)
+        )
+        all_results.extend([result._asdict() for result in results])
+        
+        logging.info(f"Finished level {level}. Scraped {len(results)} sites.")
 
     # Save the results list to a file
     with open("scrape_results.json", "w", encoding="utf-8") as f:
-        json.dump(
-            [result._asdict() for result in results], f, ensure_ascii=False, indent=4
-        )
+        json.dump(all_results, f, ensure_ascii=False, indent=4)
+    
+    logging.info("Scraping completed for all levels.")

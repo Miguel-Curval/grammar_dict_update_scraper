@@ -55,6 +55,9 @@
             "を": "/grammar_points/%E3%82%92"
         },
         {
+            "ます": "/grammar_points/polite-verb-endings"
+        },
+        {
             "る-Verb (Negative)": "/grammar_points/%E3%82%8Bverb-%E3%81%AA%E3%81%84"
         },
         {
@@ -188,6 +191,15 @@
         },
         {
             "誰": "/grammar_points/%E3%81%A0%E3%82%8C"
+        },
+        {
+            "なぜ": "/grammar_points/%E3%81%AA%E3%81%9C"
+        },
+        {
+            "どうして": "/grammar_points/%E3%81%A9%E3%81%86%E3%81%97%E3%81%A6"
+        },
+        {
+            "なんで": "/grammar_points/%E3%81%AA%E3%82%93%E3%81%A7"
         },
         {
             "い-Adjective (Predicate)": "/grammar_points/%E3%81%84-adjective-predicate"
@@ -390,6 +402,9 @@
             "にくい": "/grammar_points/%E3%81%AB%E3%81%8F%E3%81%84"
         },
         {
+            "づらい": "/grammar_points/%E3%81%A5%E3%82%89%E3%81%84"
+        },
+        {
             "だんだん": "/grammar_points/%E3%81%A0%E3%82%93%E3%81%A0%E3%82%93"
         },
         {
@@ -553,6 +568,9 @@
         },
         {
             "〜ようと思う・〜おうと思う": "/grammar_points/%E3%82%88%E3%81%86%E3%81%A8%E6%80%9D%E3%81%86-%E3%81%8A%E3%81%86%E3%81%A8%E6%80%9D%E3%81%86"
+        },
+        {
+            "く・に": "/grammar_points/describing-verbs"
         },
         {
             "～にする・～くする": "/grammar_points/%E3%81%AB%E3%81%99%E3%82%8B-%E3%81%8F%E3%81%99%E3%82%8B"
@@ -1597,6 +1615,9 @@
             "どうやら": "/grammar_points/%E3%81%A9%E3%81%86%E3%82%84%E3%82%89"
         },
         {
+            "なにやら": "/grammar_points/%E3%81%AA%E3%81%AB%E3%82%84%E3%82%89"
+        },
+        {
             "よりほかない": "/grammar_points/%E3%82%88%E3%82%8A%E3%81%BB%E3%81%8B%E3%81%AA%E3%81%84"
         },
         {
@@ -1748,6 +1769,9 @@
         },
         {
             "次第だ・次第で": "/grammar_points/%E6%AC%A1%E7%AC%AC%E3%81%A0-%E6%AC%A1%E7%AC%AC%E3%81%A7"
+        },
+        {
+            "次第に": "/grammar_points/%E6%AC%A1%E7%AC%AC%E3%81%AB"
         },
         {
             "～てこそ": "/grammar_points/-%E3%81%A6%E3%81%93%E3%81%9D"
@@ -1957,6 +1981,9 @@
             "かと思ったら・かと思うと": "/grammar_points/%E3%81%8B%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%82%89-%E3%81%8B%E3%81%A8%E6%80%9D%E3%81%86%E3%81%A8"
         },
         {
+            "～ばと思います": "/grammar_points/%EF%BD%9E%E3%81%B0%E3%81%A8%E6%80%9D%E3%81%84%E3%81%BE%E3%81%99"
+        },
+        {
             "というものでもない": "/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%81%A7%E3%82%82%E3%81%AA%E3%81%84"
         },
         {
@@ -2000,6 +2027,9 @@
         },
         {
             "お～願う": "/grammar_points/%E3%81%8A-%E9%A1%98%E3%81%86"
+        },
+        {
+            "～て頂戴": "/grammar_points/%E3%81%A6%E9%A0%82%E6%88%B4"
         },
         {
             "とか": "/grammar_points/%E3%81%A8%E3%81%8B"
@@ -2060,6 +2090,9 @@
         },
         {
             "傾向がある": "/grammar_points/%E5%82%BE%E5%90%91%E3%81%8C%E3%81%82%E3%82%8B"
+        },
+        {
+            "～に値する": "/grammar_points/%E3%81%AB%E5%80%A4%E3%81%99%E3%82%8B"
         },
         {
             "てしょうがない": "/grammar_points/%E3%81%A6%E3%81%97%E3%82%87%E3%81%86%E3%81%8C%E3%81%AA%E3%81%84"
@@ -2289,7 +2322,7 @@
             "塗れ": "/grammar_points/%E5%A1%97%E3%82%8C"
         },
         {
-            "ようが～まいが": "/grammar_points/-%E3%82%88%E3%81%86--%E3%81%86-%E3%81%BE%E3%81%84%20-%20%E3%81%8C-%E3%81%A8"
+            "ようが～まいが": "/grammar_points/-%E3%82%88%E3%81%86--%E3%81%86-%E3%81%BE%E3%81%84-%E3%81%8C-%E3%81%A8"
         },
         {
             "からする": "/grammar_points/%E3%81%8B%E3%82%89%E3%81%99%E3%82%8B"
@@ -2418,6 +2451,9 @@
             "ことだし": "/grammar_points/%E3%81%93%E3%81%A8%E3%81%A0%E3%81%97"
         },
         {
+            "がん～": "/grammar_points/%E3%81%8C%E3%82%93-totally"
+        },
+        {
             "か否か": "/grammar_points/%E3%81%8B%E5%90%A6%E3%81%8B"
         },
         {
@@ -2467,6 +2503,9 @@
         },
         {
             "そばから": "/grammar_points/%E3%81%9D%E3%81%B0%E3%81%8B%E3%82%89"
+        },
+        {
+            "訳あり(訳あって)": "/grammar_points/%E8%A8%B3%E3%81%82%E3%82%8A"
         },
         {
             "に至って・に至り": "/grammar_points/%E3%81%AB%E8%87%B3%E3%81%A3%E3%81%A6-%E3%81%AB%E8%87%B3%E3%82%8A"
@@ -2520,6 +2559,9 @@
             "わ〜わ": "/grammar_points/%E3%82%8F-%E3%82%8F"
         },
         {
+            "なりとも": "/grammar_points/%E3%81%AA%E3%82%8A%E3%81%A8%E3%82%82"
+        },
+        {
             "に至っても": "/grammar_points/%E3%81%AB%E8%87%B3%E3%81%A3%E3%81%A6%E3%82%82"
         },
         {
@@ -2569,6 +2611,9 @@
         },
         {
             "わ〜わ（で）": "/grammar_points/%E3%82%8F-%E3%82%8F%E3%81%A7"
+        },
+        {
+            "どうにか": "/grammar_points/%E3%81%A9%E3%81%86%E3%81%AB%E3%81%8B"
         },
         {
             "や否や": "/grammar_points/%E3%82%84%E5%90%A6%E3%82%84"
@@ -2679,7 +2724,7 @@
             "べくもない": "/grammar_points/%E3%81%B9%E3%81%8F%E3%82%82%E3%81%AA%E3%81%84"
         },
         {
-            "と来（き）たら": "/grammar_points/%E3%81%A8%E3%81%8D%E3%81%9F%E3%82%892"
+            "と来たら": "/grammar_points/%E3%81%A8%E3%81%8D%E3%81%9F%E3%82%892"
         },
         {
             "ものとして": "/grammar_points/%E3%82%82%E3%81%AE%E3%81%A8%E3%81%97%E3%81%A6"
@@ -2790,6 +2835,9 @@
         },
         {
             "あわよくば": "/grammar_points/%E3%81%82%E3%82%8F%E3%82%88%E3%81%8F%E3%81%B0"
+        },
+        {
+            "むず": "/grammar_points/%E3%82%80%E3%81%9A"
         }
     ]
 }
